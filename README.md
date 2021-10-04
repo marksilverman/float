@@ -1,6 +1,6 @@
 # float
 This is a small program I wrote to help me understand how floating point numbers are encoded (as per IEEE 754).
-- it encodes a single-precision (32-bit) floating point number and then decodes it
+- it decodes a single-precision (32-bit), small-endian floating point number
 - aside from zero and negative zero, it doesn't understand any "special" numbers (like infinity or NaN)
 
 The output looks like this:
