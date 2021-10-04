@@ -4,6 +4,7 @@ This is a small program I wrote to help me understand how floating point numbers
 - aside from zero and negative zero, it doesn't understand any "special" numbers (like infinity or NaN)
 
 The output looks like this:
+
      % ./float
     input: 3.14159
     in binary: 0b01000000010010010000111111011011
