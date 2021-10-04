@@ -31,6 +31,20 @@ int main(int argc, char **argv)
         bitset<8>{asuint[0]}.to_string();
     show("in binary: 0b", binary);
 
+    if (asuint[0] == 0 && asuint[1] == 0 && asuint[2] == 0)
+    {
+        if (asuint[3] == 0)
+        {
+            show("special case: all bits are zero, so value is zero");
+            return 0;
+        }
+        if (asuint[3] == 128)
+        {
+            show("special case: negative zero");
+            return 0;
+        }
+    }
+
     auto sign = stoi(binary.substr(0, 1), nullptr, 2);
     auto exponent_str = binary.substr(1, 8);
     unsigned int exponent = abs(stoi(exponent_str, nullptr, 2) - 127);
@@ -64,4 +78,5 @@ int main(int argc, char **argv)
         show("the result matches the input");
     else
         show("the result does NOT match the input!");
+    return 0;
 }
